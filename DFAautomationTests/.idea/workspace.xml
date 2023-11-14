@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2e2c1a18-e64c-44c1-869d-cdbed49dcc8f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dfa/CommonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dfa/CommonUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dfa/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dfa/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dfa/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dfa/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dfa/CommonUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dfa/CommonUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dfa/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dfa/Config.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dfa/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dfa/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CreateNewApplicationHomeowner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreateNewApplicationHomeowner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/CreateNewApplicationHomeowner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CreateNewApplicationHomeowner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Login.class" afterDir="false" />
     </list>
@@ -40,14 +37,18 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/dfa/CommonUtils.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/HomeOwnerApplicationDetails.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/ResidentialTenantNInsurance.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/dfa/Config.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/ResidentialTenantUInsurance.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/Login.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/EditApplicationHomeownerNInsurance.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/HmeownerUnsureInsurance.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/CreateProfile.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/dfa/Constants.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/test/java/TestSuiteAllTests.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/CreateNewApplicationHomeowner.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -77,7 +78,7 @@
       <recent name="C:\workspace4\emcr-dfa-portal\DFAautomationTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Login.test">
+  <component name="RunManager" selected="JUnit.TestSuiteAllTests">
     <configuration name="CreateNewApplicationHomeowner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DFAautomationTests" />
       <option name="PACKAGE_NAME" value="" />
@@ -106,12 +107,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomeOwnerApplicationDetails.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Login" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DFAautomationTests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="HomeOwnerApplicationDetails" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="Login" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
       <envs>
         <env name="USERNAME_BCEID" value="DFA00004" />
         <env name="PASSWORD_BCEID" value="98900004" />
@@ -150,18 +151,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.TestSuiteAllTests" />
-      <item itemvalue="JUnit.HomeOwnerApplicationDetails.test" />
       <item itemvalue="JUnit.HomeOwnerApplicationDetails" />
       <item itemvalue="JUnit.CreateNewApplicationHomeowner" />
       <item itemvalue="JUnit.Login.test" />
+      <item itemvalue="JUnit.Login" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Login.test" />
-        <item itemvalue="JUnit.CreateNewApplicationHomeowner" />
-        <item itemvalue="JUnit.HomeOwnerApplicationDetails" />
         <item itemvalue="JUnit.TestSuiteAllTests" />
-        <item itemvalue="JUnit.HomeOwnerApplicationDetails.test" />
+        <item itemvalue="JUnit.CreateNewApplicationHomeowner" />
+        <item itemvalue="JUnit.Login" />
+        <item itemvalue="JUnit.Login.test" />
+        <item itemvalue="JUnit.HomeOwnerApplicationDetails" />
       </list>
     </recent_temporary>
   </component>

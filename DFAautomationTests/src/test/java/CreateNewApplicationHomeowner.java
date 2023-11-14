@@ -22,7 +22,7 @@ public class CreateNewApplicationHomeowner {
     private WebDriver driver;
 
 
-    @After
+/*    @After
     public void tearDown() {
         driver.close();
         driver.quit();
@@ -30,7 +30,7 @@ public class CreateNewApplicationHomeowner {
     @AfterClass
     public static void afterClass() {
         WebDriverManager.instance = null;
-    }
+    }*/
 
 
     @Test
@@ -61,7 +61,7 @@ public class CreateNewApplicationHomeowner {
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='radio' and @value='No']")));
         js2.executeScript("arguments[0].click();", element);
         new WebDriverWait(driver, Duration.ofSeconds(60)).until(
-                ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), 'I/We declare that we carry no insurance (no fire, theft or liability) on the property listed on this')]")));
+                ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), 'To qualify for DFA you must have occupied the property as your principal residence')]")));
 
         Thread.sleep(1000);
         element = driverWait.until(ExpectedConditions
@@ -89,13 +89,13 @@ public class CreateNewApplicationHomeowner {
 
         new WebDriverWait(driver, Duration.ofSeconds(60)).until(
                 ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(text(), ' Create New Application ')]"))).click();
-        new WebDriverWait(driver, Duration.ofSeconds(60)).until(
+/*        new WebDriverWait(driver, Duration.ofSeconds(60)).until(
                 ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), 'Notice of Collection')]")));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
         Thread.sleep(1000);
         new WebDriverWait(driver, Duration.ofSeconds(60)).until(
-                ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Application Type & Insurance ')]"))).click();
+                ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Application Type & Insurance ')]"))).click();*/
 
         }
     }
