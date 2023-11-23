@@ -40,7 +40,7 @@ public class ResidentialTenantNInsurance {
         login.test();
 
         Thread.sleep(4000);
-        CreateNewApplicationHomeowner createAp = new CreateNewApplicationHomeowner();
+        CreateNewApplicationHomeownerNoInsurance createAp = new CreateNewApplicationHomeownerNoInsurance();
         createAp.createAppl(element, driverWait, driver);
 
         //TO DO - Profile verification

@@ -4,18 +4,15 @@ import org.junit.AfterClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import static dfa.CustomWebDriverManager.getDriver;
 
-public class CreateNewApplicationHomeowner {
+public class CreateNewApplicationHomeownerNoInsurance {
 
 
     private WebDriver driver;
@@ -43,7 +40,7 @@ public class CreateNewApplicationHomeowner {
         login.test();
 
         Thread.sleep(4000);
-        CreateNewApplicationHomeowner createAp = new CreateNewApplicationHomeowner();
+        CreateNewApplicationHomeownerNoInsurance createAp = new CreateNewApplicationHomeownerNoInsurance();
         createAp.createAppl(element, driverWait, driver);
 
         //TO DO - Profile verification
