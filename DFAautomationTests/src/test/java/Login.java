@@ -1,5 +1,5 @@
 import dfa.CommonUtils;
-import dfa.WebDriverManager;
+import dfa.CustomWebDriverManager;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Test;
@@ -24,18 +24,19 @@ public class Login {
         driver.close();
         driver.quit();
     }
+
     @AfterClass
     public static void afterClass() {
-        WebDriverManager.instance = null;
+        CustomWebDriverManager.instance = null;
     }
 
 
     @Test
     public void test() throws Exception {
-        driver = WebDriverManager.getDriver();
-        WebDriverWait driverWait = WebDriverManager.getDriverWait();
-        WebElement element = WebDriverManager.getElement();
-        WebDriverManager.getElements();
+        driver = CustomWebDriverManager.getDriver();
+        WebDriverWait driverWait = CustomWebDriverManager.getDriverWait();
+        WebElement element = CustomWebDriverManager.getElement();
+        CustomWebDriverManager.getElements();
 
         CommonUtils.login();
         JavascriptExecutor js = (JavascriptExecutor) driver;

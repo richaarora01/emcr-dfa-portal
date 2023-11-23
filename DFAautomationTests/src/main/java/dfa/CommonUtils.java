@@ -13,8 +13,8 @@ public class CommonUtils {
 
     public static void login() throws Exception {
 
-        WebDriver driver = WebDriverManager.getDriver();
-        WebElement element = WebDriverManager.getElement();
+        WebDriver driver = CustomWebDriverManager.getDriver();
+        WebElement element = CustomWebDriverManager.getElement();
 
         if (Config.ENVIROMENT.equals(Constants.DEV)) {
             driver.get("https://dfa-portal-dev.apps.silver.devops.gov.bc.ca/");

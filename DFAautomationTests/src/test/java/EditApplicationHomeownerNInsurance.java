@@ -1,4 +1,4 @@
-import dfa.WebDriverManager;
+import dfa.CustomWebDriverManager;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Test;
@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-import static dfa.WebDriverManager.getDriver;
+import static dfa.CustomWebDriverManager.getDriver;
 
 public class EditApplicationHomeownerNInsurance {
 
@@ -26,16 +26,16 @@ public class EditApplicationHomeownerNInsurance {
 
     @AfterClass
     public static void afterClass() {
-        WebDriverManager.instance = null;
+        CustomWebDriverManager.instance = null;
     }
 
 
     @Test
     public void test() throws Exception {
         driver = getDriver();
-        WebDriverWait driverWait = WebDriverManager.getDriverWait();
-        WebElement element = WebDriverManager.getElement();
-        WebDriverManager.getElements();
+        WebDriverWait driverWait = CustomWebDriverManager.getDriverWait();
+        WebElement element = CustomWebDriverManager.getElement();
+        CustomWebDriverManager.getElements();
 
         Login login = new Login();
         login.test();
