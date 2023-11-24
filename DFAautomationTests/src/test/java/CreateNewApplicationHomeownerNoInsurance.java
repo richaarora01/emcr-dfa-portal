@@ -18,7 +18,7 @@ public class CreateNewApplicationHomeownerNoInsurance {
     private WebDriver driver;
 
 
-    @After
+ /*   @After
     public void tearDown() {
         driver.close();
         driver.quit();
@@ -26,7 +26,7 @@ public class CreateNewApplicationHomeownerNoInsurance {
     @AfterClass
     public static void afterClass() {
         CustomWebDriverManager.instance = null;
-    }
+    }*/
 
 
     @Test
@@ -119,10 +119,8 @@ public class CreateNewApplicationHomeownerNoInsurance {
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[2]/app-component-wrapper/app-profile-verification/mat-card/mat-card-content/form/mat-card-content[5]/div[2]/div[2]/div[2]/mat-form-field/div/div[1]/div[3]/input")));
         js35.executeScript("arguments[0].click();", element);
         js35.executeScript("arguments[0].value='test@test.com'", element);
-        Thread.sleep(1000);
         element.clear();
         element.sendKeys("test@test.com");
-        Thread.sleep(1000);
         JavascriptExecutor js33 = (JavascriptExecutor) driver;
         element = driverWait
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Application Type ')]")));
@@ -130,6 +128,35 @@ public class CreateNewApplicationHomeownerNoInsurance {
 
         new WebDriverWait(driver, Duration.ofSeconds(60)).until(
                 ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(text(), 'Select an application type')]")));
+
+        //Create Homeowner appl
+        JavascriptExecutor js39 = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.id("canvas")));
+        js39.executeScript("arguments[0].click();", element);
+        Thread.sleep(1000);
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.id("mat-input-7")));
+        element.sendKeys("Test test");
+
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.id("mat-input-9")));
+        element.sendKeys("Second Name");
+        Thread.sleep(1000);
+        ((JavascriptExecutor) driver)
+                .executeScript("window.scrollTo(0, document.body.scrollHeight)");
+
+        Thread.sleep(1000);
+        new WebDriverWait(driver, Duration.ofSeconds(60)).until(
+                ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(text(), ' Next - Damaged Property ')]"))).click();
+
+        Thread.sleep(1000);
+        new WebDriverWait(driver, Duration.ofSeconds(60)).until(
+                ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(text(), ' Yes, I have selected the correct')]"))).click();
+
+        new WebDriverWait(driver, Duration.ofSeconds(60)).until(
+                ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(text(), ' 123 FIRST STREET')]")));
+
 
         }
 
