@@ -18,7 +18,7 @@ public class CreateNewApplicationHomeownerNoInsurance {
     private WebDriver driver;
 
 
- /*   @After
+    @After
     public void tearDown() {
         driver.close();
         driver.quit();
@@ -26,7 +26,7 @@ public class CreateNewApplicationHomeownerNoInsurance {
     @AfterClass
     public static void afterClass() {
         CustomWebDriverManager.instance = null;
-    }*/
+    }
 
 
     @Test

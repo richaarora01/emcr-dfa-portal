@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="2e2c1a18-e64c-44c1-869d-cdbed49dcc8f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/HomeOwnerWithnsurance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HomeOwnerWithnsurance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/HomeOwnerWithnsurance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HomeOwnerWithnsurance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CreateNewApplicationHomeownerNoInsurance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreateNewApplicationHomeownerNoInsurance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/EditApplicationHomeownerNInsurance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EditApplicationHomeownerNInsurance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/HmeownerUnsureInsurance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HmeownerUnsureInsurance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CreateNewApplicationHomeownerNoInsurance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CreateNewApplicationHomeownerNoInsurance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/EditApplicationHomeownerNInsurance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/EditApplicationHomeownerNInsurance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/HmeownerUnsureInsurance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HmeownerUnsureInsurance.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +79,7 @@
       <recent name="C:\workspace4\emcr-dfa-portal\DFAautomationTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HomeOwnerWithnsurance">
+  <component name="RunManager" selected="JUnit.HmeownerUnsureInsurance">
     <configuration name="CreateNewApplicationHomeownerNoInsurance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DFAautomationTests" />
       <option name="PACKAGE_NAME" value="" />
@@ -104,24 +108,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomeOwnerApplicationDetails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EditApplicationHomeownerNInsurance.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DFAautomationTests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="HomeOwnerApplicationDetails" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <envs>
-        <env name="USERNAME_BCEID" value="DFA00004" />
-        <env name="PASSWORD_BCEID" value="98900004" />
-      </envs>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HomeOwnerApplicationDetails.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DFAautomationTests" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="HomeOwnerApplicationDetails" />
+      <option name="MAIN_CLASS_NAME" value="EditApplicationHomeownerNInsurance" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <envs>
@@ -132,34 +122,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomeOwnerWithnsurance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HmeownerUnsureInsurance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DFAautomationTests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="HomeOwnerWithnsurance" />
+      <option name="MAIN_CLASS_NAME" value="HmeownerUnsureInsurance" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <envs>
-        <env name="USERNAME_BCEID" value="DFA00005" />
-        <env name="PASSWORD_BCEID" value="98900005" />
+        <env name="USERNAME_BCEID" value="DFA00004" />
+        <env name="PASSWORD_BCEID" value="98900004" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HmeownerUnsureInsurance.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DFAautomationTests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HmeownerUnsureInsurance" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <envs>
+        <env name="USERNAME_BCEID" value="DFA00004" />
+        <env name="PASSWORD_BCEID" value="98900004" />
       </envs>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.CreateNewApplicationHomeownerNoInsurance" />
+      <item itemvalue="JUnit.HmeownerUnsureInsurance" />
+      <item itemvalue="JUnit.HmeownerUnsureInsurance.test" />
       <item itemvalue="JUnit.CreateNewApplicationHomeownerNoInsurance.test" />
-      <item itemvalue="JUnit.HomeOwnerApplicationDetails.test" />
-      <item itemvalue="JUnit.HomeOwnerApplicationDetails" />
-      <item itemvalue="JUnit.HomeOwnerWithnsurance" />
+      <item itemvalue="JUnit.EditApplicationHomeownerNInsurance.test" />
+      <item itemvalue="JUnit.CreateNewApplicationHomeownerNoInsurance" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HomeOwnerWithnsurance" />
-        <item itemvalue="JUnit.HomeOwnerApplicationDetails" />
-        <item itemvalue="JUnit.HomeOwnerApplicationDetails.test" />
-        <item itemvalue="JUnit.CreateNewApplicationHomeownerNoInsurance.test" />
+        <item itemvalue="JUnit.HmeownerUnsureInsurance" />
         <item itemvalue="JUnit.CreateNewApplicationHomeownerNoInsurance" />
+        <item itemvalue="JUnit.CreateNewApplicationHomeownerNoInsurance.test" />
+        <item itemvalue="JUnit.HmeownerUnsureInsurance.test" />
+        <item itemvalue="JUnit.EditApplicationHomeownerNInsurance.test" />
       </list>
     </recent_temporary>
   </component>
