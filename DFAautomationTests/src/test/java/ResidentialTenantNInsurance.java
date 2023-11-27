@@ -18,7 +18,7 @@ public class ResidentialTenantNInsurance {
     private WebDriver driver;
 
 
-    @After
+/*    @After
     public void tearDown() {
         driver.close();
         driver.quit();
@@ -26,7 +26,7 @@ public class ResidentialTenantNInsurance {
     @AfterClass
     public static void afterClass() {
         CustomWebDriverManager.instance = null;
-    }
+    }*/
 
 
     @Test
@@ -57,6 +57,113 @@ public class ResidentialTenantNInsurance {
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='radio' and @value='No']")));
         js2.executeScript("arguments[0].click();", element);
 
+        //What is the damaged property address?
+        JavascriptExecutor js12 = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), 'Same as my profile address')]")));
+        js12.executeScript("arguments[0].click();", element);
+
+        Thread.sleep(1000);
+        JavascriptExecutor js13 = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-prescreening/div/app-component-wrapper/prescreening/mat-card/mat-card-content/form/div[2]/div/mat-form-field[1]/div/div[1]/div[4]/mat-datepicker-toggle/button")));
+        js13.executeScript("arguments[0].click();", element);
+
+        JavascriptExecutor js14 = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"mat-datepicker-0\"]/div/mat-month-view/table/tbody/tr[1]/td[2]/button/div[1]")));
+        js14.executeScript("arguments[0].click();", element);
+
+        JavascriptExecutor js15 = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), 'Matching Disaster Event')]")));
+        js15.executeScript("arguments[0].click();", element);
+
+        JavascriptExecutor js16 = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"mat-option-0\"]/span")));
+        js16.executeScript("arguments[0].click();", element);
+
+        JavascriptExecutor js17 = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"mat-radio-3\"]/label/span[1]/span[1]")));
+        js17.executeScript("arguments[0].click();", element);
+
+        JavascriptExecutor js18 = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"mat-radio-6\"]/label/span[1]/span[1]")));
+        js18.executeScript("arguments[0].click();", element);
+
+        Thread.sleep(1000);
+        JavascriptExecutor js3 = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Submit Answers ')]")));
+        js3.executeScript("arguments[0].click();", element);
+
+        JavascriptExecutor js31 = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Yes, I want to apply now ')]")));
+        js31.executeScript("arguments[0].click();", element);
+
+        //Notice
+        Thread.sleep(1000);
+        JavascriptExecutor js32 = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Verify Your Profile ')]")));
+        js32.executeScript("arguments[0].click();", element);
+        Thread.sleep(1000);
+        JavascriptExecutor js35 = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[2]/app-component-wrapper/app-profile-verification/mat-card/mat-card-content/form/mat-card-content[5]/div[2]/div[2]/div[2]/mat-form-field/div/div[1]/div[3]/input")));
+        js35.executeScript("arguments[0].click();", element);
+        js35.executeScript("arguments[0].value='test@test.com'", element);
+        element.clear();
+        element.sendKeys("test@test.com");
+        Thread.sleep(1000);
+        JavascriptExecutor js33 = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Application Type ')]")));
+        js33.executeScript("arguments[0].click();", element);
+        Thread.sleep(1000);
+        new WebDriverWait(driver, Duration.ofSeconds(60)).until(
+                ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(text(), 'Select an application type')]")));
+        Thread.sleep(1000);
+        //Create Homeowner appl
+        JavascriptExecutor js39 = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.id("canvas")));
+        js39.executeScript("arguments[0].click();", element);
+        Thread.sleep(1000);
+        //Add name
+        JavascriptExecutor jsc = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/apptype-insurance/mat-card/mat-card-content/form/div[3]/div[1]/app-signature/div/div[2]/div/mat-form-field/div/div[1]/div[3]/input")));
+        jsc.executeScript("arguments[0].click();", element);
+        jsc.executeScript("arguments[0].value='Test Name'", element);
+        Thread.sleep(1000);
+        JavascriptExecutor jsd = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/apptype-insurance/mat-card/mat-card-content/form/div[3]/div[2]/app-signature/div/div[2]/div/mat-form-field/div/div[1]/div[3]/input")));
+        jsd.executeScript("arguments[0].click();", element);
+        jsd.executeScript("arguments[0].value='Test Name'", element);
+        Thread.sleep(1000);
+        ((JavascriptExecutor) driver)
+                .executeScript("window.scrollTo(0, document.body.scrollHeight)");
+
+        Thread.sleep(1000);
+        new WebDriverWait(driver, Duration.ofSeconds(60)).until(
+                ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(text(), ' Next - Damaged Property ')]"))).click();
+
+        Thread.sleep(1000);
+        new WebDriverWait(driver, Duration.ofSeconds(60)).until(
+                ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(text(), ' Yes, I have selected the correct')]"))).click();
+
+        new WebDriverWait(driver, Duration.ofSeconds(60)).until(
+                ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(text(), ' 123 FIRST STREET')]")));
+        //TO DO - Profile verification
+        Thread.sleep(1000);
+
+
         new WebDriverWait(driver, Duration.ofSeconds(60)).until(
                 ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), 'I/We declare that we carry no insurance (no fire, theft or liability) on the property listed on this')]")));
 
@@ -70,10 +177,10 @@ public class ResidentialTenantNInsurance {
         element.click();
 
         Thread.sleep(2000);
-        JavascriptExecutor js3 = (JavascriptExecutor) driver;
+        JavascriptExecutor jsk = (JavascriptExecutor) driver;
         element = driverWait
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Damaged Property ')]")));
-        js3.executeScript("arguments[0].click();", element);
+        jsk.executeScript("arguments[0].click();", element);
         Thread.sleep(1500);
 
         //Dsiclaimer
@@ -141,9 +248,9 @@ public class ResidentialTenantNInsurance {
         js44.executeScript("arguments[0].click();", element);
         element.sendKeys("Test123TEST@test.com");
         Thread.sleep(1000);
-        JavascriptExecutor js31 = (JavascriptExecutor) driver;
+        JavascriptExecutor jsa = (JavascriptExecutor) driver;
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Cause of Damage ')]")));
-        js31.executeScript("arguments[0].click();", element);
+        jsa.executeScript("arguments[0].click();", element);
         Thread.sleep(1000);
 
         HomeOwnerApplicationDetails damageAppl = new HomeOwnerApplicationDetails();
@@ -213,9 +320,9 @@ public class ResidentialTenantNInsurance {
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[6]/app-component-wrapper/app-supporting-documents/mat-card/mat-card-content/div[5]/div/app-dfa-attachment/form/div/mat-card/div[2]/div[2]/button")));
         js382.executeScript("arguments[0].click();", element);
         Thread.sleep(2000);
-        JavascriptExecutor js39= (JavascriptExecutor) driver;
+        JavascriptExecutor jsb= (JavascriptExecutor) driver;
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Review Submission ')]")));
-        js39.executeScript("arguments[0].click();", element);
+        jsb.executeScript("arguments[0].click();", element);
 
         //Sign and Submit
         HomeOwnerApplicationDetails signSubmit = new HomeOwnerApplicationDetails();

@@ -36,6 +36,17 @@ public class HmeownerUnsureInsurance {
         WebElement element = CustomWebDriverManager.getElement();
         CustomWebDriverManager.getElements();
 
+        HmeownerUnsureInsurance unsure = new HmeownerUnsureInsurance();
+        unsure.unsureInsurance(element, driverWait, driver);
+
+        //Sign and Submit
+        HomeOwnerApplicationDetails signSubmit = new HomeOwnerApplicationDetails();
+        signSubmit.submit(element, driverWait, driver);
+
+
+    }
+
+    public void unsureInsurance(WebElement element, WebDriverWait driverWait, WebDriver driver) throws Exception{
         Login login = new Login();
         login.test();
 
@@ -221,11 +232,6 @@ public class HmeownerUnsureInsurance {
         JavascriptExecutor js393= (JavascriptExecutor) driver;
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Review Submission ')]")));
         js393.executeScript("arguments[0].click();", element);
-
-        //Sign and Submit
-        HomeOwnerApplicationDetails signSubmit = new HomeOwnerApplicationDetails();
-        signSubmit.submit(element, driverWait, driver);
-
 
     }
 }
