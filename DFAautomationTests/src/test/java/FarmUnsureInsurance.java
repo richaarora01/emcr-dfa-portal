@@ -13,7 +13,7 @@ import java.time.Duration;
 
 import static dfa.CustomWebDriverManager.getDriver;
 
-public class SmallBusinessUnsureInsurance {
+public class FarmUnsureInsurance {
 
     private WebDriver driver;
 
@@ -49,7 +49,7 @@ public class SmallBusinessUnsureInsurance {
         //Small business
         JavascriptExecutor js1 = (JavascriptExecutor) driver;
         element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='radio' and @value='SmallBusinessOwner']")));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='radio' and @value='FarmOwner']")));
         js1.executeScript("arguments[0].click();", element);
         Thread.sleep(1000);
         JavascriptExecutor js2 = (JavascriptExecutor) driver;

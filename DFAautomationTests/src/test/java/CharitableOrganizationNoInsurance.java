@@ -13,7 +13,7 @@ import java.time.Duration;
 
 import static dfa.CustomWebDriverManager.getDriver;
 
-public class SmallBusinessUnsureInsurance {
+public class CharitableOrganizationNoInsurance {
 
     private WebDriver driver;
 
@@ -49,12 +49,12 @@ public class SmallBusinessUnsureInsurance {
         //Small business
         JavascriptExecutor js1 = (JavascriptExecutor) driver;
         element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='radio' and @value='SmallBusinessOwner']")));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='radio' and @value='CharitableOrganization']")));
         js1.executeScript("arguments[0].click();", element);
         Thread.sleep(1000);
         JavascriptExecutor js2 = (JavascriptExecutor) driver;
         element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='radio' and @value='Unsure']")));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='radio' and @value='No']")));
         js2.executeScript("arguments[0].click();", element);
 
         //What is the damaged property address?
@@ -128,14 +128,48 @@ public class SmallBusinessUnsureInsurance {
         new WebDriverWait(driver, Duration.ofSeconds(60)).until(
                 ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(text(), 'Select an application type')]")));
         Thread.sleep(1000);
-
-        //General or Sole Proprietorship or DBA name
-        JavascriptExecutor jsa = (JavascriptExecutor) driver;
+        //Create Homeowner appl
+        JavascriptExecutor js39 = (JavascriptExecutor) driver;
         element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='radio' and @value='General']")));
+                .until(ExpectedConditions.presenceOfElementLocated(By.id("canvas")));
+        js39.executeScript("arguments[0].click();", element);
         Thread.sleep(1000);
-        jsa.executeScript("arguments[0].click();", element);
+        //Add name
+        JavascriptExecutor jsc = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/apptype-insurance/mat-card/mat-card-content/form/div[3]/div[1]/app-signature/div/div[2]/div/mat-form-field/div/div[1]/div[3]/input")));
+        jsc.executeScript("arguments[0].click();", element);
+        jsc.executeScript("arguments[0].value='Test Name'", element);
         Thread.sleep(1000);
+        JavascriptExecutor jsd = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/apptype-insurance/mat-card/mat-card-content/form/div[3]/div[2]/app-signature/div/div[2]/div/mat-form-field/div/div[1]/div[3]/input")));
+        jsd.executeScript("arguments[0].click();", element);
+        jsd.executeScript("arguments[0].value='Test Name'", element);
+        JavascriptExecutor jsn = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/apptype-insurance/mat-card/mat-card-content/form/div[3]/div[2]/app-signature/div/div[1]/div/canvas")));
+        jsn.executeScript("arguments[0].click();", element);
+        Thread.sleep(1000);
+        JavascriptExecutor jsx = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/apptype-insurance/mat-card/mat-card-content/form/div[3]/div[1]/app-signature/div/div[1]/div/canvas")));
+        jsx.executeScript("arguments[0].click();", element);
+        Thread.sleep(1000);
+        //Add name
+        JavascriptExecutor jsq = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/apptype-insurance/mat-card/mat-card-content/form/div[3]/div[1]/app-signature/div/div[2]/div/mat-form-field/div/div[1]/div[3]/input")));
+        jsq.executeScript("arguments[0].click();", element);
+        jsq.executeScript("arguments[0].value='ABC Name'", element);
+        Thread.sleep(1000);
+        JavascriptExecutor jsh = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//html")));
+        jsh.executeScript("arguments[0].click();", element);
+
+        Thread.sleep(1000);
+
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         element = driverWait
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Damaged Property ')]")));
@@ -189,9 +223,61 @@ public class SmallBusinessUnsureInsurance {
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Supporting Documents ')]")));
         js37.executeScript("arguments[0].click();", element);
 
-        //Add insurance template
-        SmallBusinessNoInsurance docsSamll = new SmallBusinessNoInsurance();
-        docsSamll.documentsSmallBusiness(element, driverWait, driver);
+        //Add insurance template docs
+        Thread.sleep(2000);
+        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' + Add Insurance Template ')]")));
+        element.click();
+
+        Thread.sleep(1000);
+        WebElement uploadInsur = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.id("fileDrop")));
+        uploadInsur.sendKeys(System.getProperty("user.dir") + '/' + "dummy.pdf");
+
+        //Save
+        JavascriptExecutor js38= (JavascriptExecutor) driver;
+        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[6]/app-component-wrapper/app-supporting-documents/mat-card/mat-card-content/div[3]/div/app-dfa-attachment/form/div/mat-card/div[2]/div[2]/button")));
+        js38.executeScript("arguments[0].click();", element);
+        Thread.sleep(2000);
+        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' + Add Directors Listing ')]")));
+        element.click();
+
+        Thread.sleep(1000);
+        WebElement uploadRent = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.id("fileDrop")));
+        uploadRent.sendKeys(System.getProperty("user.dir") + '/' + "testDFA.xlsx");
+
+        //Save
+        JavascriptExecutor js381= (JavascriptExecutor) driver;
+        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[6]/app-component-wrapper/app-supporting-documents/mat-card/mat-card-content/div[4]/div/app-dfa-attachment/form/div/mat-card/div[2]/div[2]/button/span[1]")));
+        js381.executeScript("arguments[0].click();", element);
+
+        Thread.sleep(2000);
+        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' + Add Registration Proof ')]")));
+        element.click();
+
+        Thread.sleep(1000);
+        WebElement uploadIdentif = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.id("fileDrop")));
+        uploadIdentif.sendKeys(System.getProperty("user.dir") + '/' + "testPPXDFA.pptx");
+
+        //Save
+        Thread.sleep(1000);
+        JavascriptExecutor js382= (JavascriptExecutor) driver;
+        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[6]/app-component-wrapper/app-supporting-documents/mat-card/mat-card-content/div[5]/div/app-dfa-attachment/form/div/mat-card/div[2]/div[2]/button")));
+        js382.executeScript("arguments[0].click();", element);
+        Thread.sleep(2000);
+
+        JavascriptExecutor jsa= (JavascriptExecutor) driver;
+        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' + Add Structure and Purpose ')]")));
+        jsa.executeScript("arguments[0].click();", element);
+
+        Thread.sleep(1000);
+        WebElement uploadStr = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.id("fileDrop")));
+        uploadStr.sendKeys(System.getProperty("user.dir") + '/' + "AddStructureAndPurpose.docx");
+
+        //Save
+        Thread.sleep(1000);
+        JavascriptExecutor js383= (JavascriptExecutor) driver;
+        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[6]/app-component-wrapper/app-supporting-documents/mat-card/mat-card-content/div[6]/div/app-dfa-attachment/form/div/mat-card/div[2]/div[2]/button")));
+        js383.executeScript("arguments[0].click();", element);
+        Thread.sleep(2000);
 
         JavascriptExecutor jsb = (JavascriptExecutor) driver;
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Review Submission ')]")));

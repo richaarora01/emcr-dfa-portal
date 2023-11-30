@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2e2c1a18-e64c-44c1-869d-cdbed49dcc8f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SmallBusinessNoInsurance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SmallBusinessNoInsurance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SmallBusinessUnsureInsurance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SmallBusinessUnsureInsurance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestSuiteAllTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSuiteAllTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +67,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../jag-ccd" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -74,25 +75,11 @@
       <recent name="C:\workspace4\emcr-dfa-portal\DFAautomationTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SmallBusinessUnsureInsurance.test">
-    <configuration name="ResidentialTenantNInsurance.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CharitableOrganizationNoInsurance.test">
+    <configuration name="CharitableOrganizationNoInsurance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DFAautomationTests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ResidentialTenantNInsurance" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <envs>
-        <env name="USERNAME_BCEID" value="DFA00004" />
-        <env name="PASSWORD_BCEID" value="98900004" />
-      </envs>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ResidentialTenantUInsurance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DFAautomationTests" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ResidentialTenantUInsurance" />
+      <option name="MAIN_CLASS_NAME" value="CharitableOrganizationNoInsurance" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <envs>
@@ -103,10 +90,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ResidentialTenantUInsurance.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CharitableOrganizationNoInsurance.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DFAautomationTests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ResidentialTenantUInsurance" />
+      <option name="MAIN_CLASS_NAME" value="CharitableOrganizationNoInsurance" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <envs>
@@ -117,12 +104,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SmallBusinessNoInsurance.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FarmNoInsurance.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DFAautomationTests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SmallBusinessNoInsurance" />
+      <option name="MAIN_CLASS_NAME" value="FarmNoInsurance" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
+      <envs>
+        <env name="USERNAME_BCEID" value="DFA00004" />
+        <env name="PASSWORD_BCEID" value="98900004" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FarmUnsureInsurance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DFAautomationTests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FarmUnsureInsurance" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
       <envs>
         <env name="USERNAME_BCEID" value="DFA00004" />
         <env name="PASSWORD_BCEID" value="98900004" />
@@ -146,19 +147,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ResidentialTenantNInsurance.test" />
-      <item itemvalue="JUnit.ResidentialTenantUInsurance" />
-      <item itemvalue="JUnit.ResidentialTenantUInsurance.test" />
-      <item itemvalue="JUnit.SmallBusinessNoInsurance.test" />
       <item itemvalue="JUnit.SmallBusinessUnsureInsurance.test" />
+      <item itemvalue="JUnit.FarmUnsureInsurance" />
+      <item itemvalue="JUnit.FarmNoInsurance.test" />
+      <item itemvalue="JUnit.CharitableOrganizationNoInsurance" />
+      <item itemvalue="JUnit.CharitableOrganizationNoInsurance.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CharitableOrganizationNoInsurance.test" />
+        <item itemvalue="JUnit.CharitableOrganizationNoInsurance" />
+        <item itemvalue="JUnit.FarmNoInsurance.test" />
+        <item itemvalue="JUnit.FarmUnsureInsurance" />
         <item itemvalue="JUnit.SmallBusinessUnsureInsurance.test" />
-        <item itemvalue="JUnit.SmallBusinessNoInsurance.test" />
-        <item itemvalue="JUnit.ResidentialTenantNInsurance.test" />
-        <item itemvalue="JUnit.ResidentialTenantUInsurance" />
-        <item itemvalue="JUnit.ResidentialTenantUInsurance.test" />
       </list>
     </recent_temporary>
   </component>
