@@ -11,7 +11,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 import static dfa.CustomWebDriverManager.getDriver;
 
@@ -231,14 +233,12 @@ public class SmallBusinessNoInsurance {
         JavascriptExecutor js5 = (JavascriptExecutor) driver;
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[1]/app-component-wrapper/app-damaged-property-address/mat-card/mat-card-content/form/div[1]/div/mat-radio-group/div[2]/app-bc-address/div/div[1]/div[1]/mat-form-field/div/div[1]/div[3]/input")));
         js5.executeScript("arguments[0].scrollIntoView(true);", element);
-        element.sendKeys("3220 Test");
+        element.sendKeys("3220 Quadra");
         Thread.sleep(1000);
-        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[1]/app-component-wrapper/app-damaged-property-address/mat-card/mat-card-content/form/div[1]/div/mat-radio-group/div[2]/app-bc-address/div/div[3]/div/mat-form-field/div/div[1]/div[3]/input")));
-        element.sendKeys("Victoria");
-        //Thread.sleep(1000);
-        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[1]/app-component-wrapper/app-damaged-property-address/mat-card/mat-card-content/form/div[1]/div/mat-radio-group/div[2]/app-bc-address/div/div[5]/div/mat-form-field/div/div[1]/div[3]/input")));
-        element.sendKeys("V8X1G3");
-
+        JavascriptExecutor js110 = (JavascriptExecutor) driver;
+        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' 3220 Quadra St, Victoria, BC, V8X 1G3 ')]")));
+        js110.executeScript("arguments[0].click();", element);
+        
         //Questions
         Thread.sleep(1000);
         JavascriptExecutor js22 = (JavascriptExecutor) driver;
@@ -296,13 +296,19 @@ public class SmallBusinessNoInsurance {
         element.sendKeys("Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m");
 
         //today date
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        LocalDate localDate = LocalDate.now();
-        String currentDateString = localDate.toString();
+        LocalDateTime ldt = LocalDateTime.now();
+        System.out.println(DateTimeFormatter.ofPattern("MM-dd-yyyy", Locale.ENGLISH).format(ldt));
+        String currentDateString = ldt.toString();
         System.out.println(currentDateString);
 
+        Thread.sleep(1000);
+        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[2]/app-component-wrapper/app-property-damage/mat-card/mat-card-content/form/div[2]/div[2]/mat-form-field/div/div[1]/div[3]/input")));
+        element.clear();
+        Thread.sleep(1000);
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[2]/app-component-wrapper/app-property-damage/mat-card/mat-card-content/form/div[2]/div[2]/mat-form-field/div/div[1]/div[3]/input")));
         element.sendKeys(currentDateString);
+
+
 
         element = driverWait
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[2]/app-component-wrapper/app-property-damage/mat-card/mat-card-content/form/div[3]/mat-form-field/div/div[1]/div[3]/textarea")));
@@ -317,11 +323,11 @@ public class SmallBusinessNoInsurance {
         js61.executeScript("arguments[0].click();", element);
         Thread.sleep(1000);
         JavascriptExecutor js8= (JavascriptExecutor) driver;
-        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/app-occupants/mat-card/mat-card-content/form[1]/div/div/div/mat-card/div[1]/div[1]/mat-form-field/div/div[1]/div[3]/mat-select/div")));
+        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/app-occupants/mat-card/mat-card-content/form[1]/div/div/div/mat-card/div[1]/div[1]/mat-form-field/div/div[1]/div[3]")));
         js8.executeScript("arguments[0].click();", element);
         Thread.sleep(1000);
         JavascriptExecutor js81= (JavascriptExecutor) driver;
-        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[2]/div[2]/div/div/div/mat-option[2]/span")));
+        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[3]/div[2]/div/div/div/mat-option[2]/span")));
         js81.executeScript("arguments[0].click();", element);
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/app-occupants/mat-card/mat-card-content/form[1]/div/div/div/mat-card/div[1]/div[2]/mat-form-field/div/div[1]/div[3]/input")).sendKeys("Lorem ipsum dolor si");

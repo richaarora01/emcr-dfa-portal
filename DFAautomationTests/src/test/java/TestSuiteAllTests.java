@@ -9,7 +9,7 @@ import org.junit.runners.Suite;
         Login.class, CreateNewApplicationHomeownerNoInsurance.class, HomeOwnerApplicationDetails.class, HomeOwnerWithnsurance.class,
         ResidentialTenantUInsurance.class, HmeownerUnsureInsurance.class, ResidentialTenantNInsurance.class, EditApplicationHomeownerNInsurance.class,
         Logout.class, AddCleanLogAndDamageAfterSubmit.class, SmallBusinessNoInsurance.class, SmallBusinessUnsureInsurance.class, CharitableOrganizationNoInsurance.class,
-        FarmNoInsurance.class, FarmUnsureInsurance.class
+        FarmNoInsurance.class, FarmUnsureInsurance.class, CharitableOrganizationUnsureInsurance.class
 })
 
 

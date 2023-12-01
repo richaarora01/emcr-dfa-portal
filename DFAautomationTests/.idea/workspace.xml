@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2e2c1a18-e64c-44c1-869d-cdbed49dcc8f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SmallBusinessUnsureInsurance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SmallBusinessUnsureInsurance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SmallBusinessNoInsurance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SmallBusinessNoInsurance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestSuiteAllTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSuiteAllTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +75,7 @@
       <recent name="C:\workspace4\emcr-dfa-portal\DFAautomationTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CharitableOrganizationNoInsurance.test">
+  <component name="RunManager" selected="JUnit.CharitableOrganizationUnsureInsurance.test">
     <configuration name="CharitableOrganizationNoInsurance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DFAautomationTests" />
       <option name="PACKAGE_NAME" value="" />
@@ -104,24 +104,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FarmNoInsurance.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CharitableOrganizationUnsureInsurance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DFAautomationTests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FarmNoInsurance" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <envs>
-        <env name="USERNAME_BCEID" value="DFA00004" />
-        <env name="PASSWORD_BCEID" value="98900004" />
-      </envs>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FarmUnsureInsurance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DFAautomationTests" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FarmUnsureInsurance" />
+      <option name="MAIN_CLASS_NAME" value="CharitableOrganizationUnsureInsurance" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <envs>
@@ -132,10 +118,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SmallBusinessUnsureInsurance.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CharitableOrganizationUnsureInsurance.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DFAautomationTests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SmallBusinessUnsureInsurance" />
+      <option name="MAIN_CLASS_NAME" value="CharitableOrganizationUnsureInsurance" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <envs>
+        <env name="USERNAME_BCEID" value="DFA00004" />
+        <env name="PASSWORD_BCEID" value="98900004" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResidentialTenantUInsurance.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DFAautomationTests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ResidentialTenantUInsurance" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <envs>
@@ -147,19 +147,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.SmallBusinessUnsureInsurance.test" />
-      <item itemvalue="JUnit.FarmUnsureInsurance" />
-      <item itemvalue="JUnit.FarmNoInsurance.test" />
       <item itemvalue="JUnit.CharitableOrganizationNoInsurance" />
       <item itemvalue="JUnit.CharitableOrganizationNoInsurance.test" />
+      <item itemvalue="JUnit.CharitableOrganizationUnsureInsurance" />
+      <item itemvalue="JUnit.ResidentialTenantUInsurance.test" />
+      <item itemvalue="JUnit.CharitableOrganizationUnsureInsurance.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CharitableOrganizationUnsureInsurance.test" />
+        <item itemvalue="JUnit.CharitableOrganizationUnsureInsurance" />
+        <item itemvalue="JUnit.ResidentialTenantUInsurance.test" />
         <item itemvalue="JUnit.CharitableOrganizationNoInsurance.test" />
         <item itemvalue="JUnit.CharitableOrganizationNoInsurance" />
-        <item itemvalue="JUnit.FarmNoInsurance.test" />
-        <item itemvalue="JUnit.FarmUnsureInsurance" />
-        <item itemvalue="JUnit.SmallBusinessUnsureInsurance.test" />
       </list>
     </recent_temporary>
   </component>
