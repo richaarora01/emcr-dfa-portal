@@ -128,46 +128,19 @@ public class CharitableOrganizationNoInsurance {
         new WebDriverWait(driver, Duration.ofSeconds(60)).until(
                 ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(text(), 'Select an application type')]")));
         Thread.sleep(1000);
-        //Create Homeowner appl
+        //Create Char org appl
         JavascriptExecutor js39 = (JavascriptExecutor) driver;
         element = driverWait
                 .until(ExpectedConditions.presenceOfElementLocated(By.id("canvas")));
         js39.executeScript("arguments[0].click();", element);
         Thread.sleep(1000);
-        //Add name
-        JavascriptExecutor jsc = (JavascriptExecutor) driver;
         element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/apptype-insurance/mat-card/mat-card-content/form/div[3]/div[1]/app-signature/div/div[2]/div/mat-form-field/div/div[1]/div[3]/input")));
-        jsc.executeScript("arguments[0].click();", element);
-        jsc.executeScript("arguments[0].value='Test Name'", element);
-        Thread.sleep(1000);
-        JavascriptExecutor jsd = (JavascriptExecutor) driver;
-        element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/apptype-insurance/mat-card/mat-card-content/form/div[3]/div[2]/app-signature/div/div[2]/div/mat-form-field/div/div[1]/div[3]/input")));
-        jsd.executeScript("arguments[0].click();", element);
-        jsd.executeScript("arguments[0].value='Test Name'", element);
-        JavascriptExecutor jsn = (JavascriptExecutor) driver;
-        element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/apptype-insurance/mat-card/mat-card-content/form/div[3]/div[2]/app-signature/div/div[1]/div/canvas")));
-        jsn.executeScript("arguments[0].click();", element);
-        Thread.sleep(1000);
-        JavascriptExecutor jsx = (JavascriptExecutor) driver;
-        element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/apptype-insurance/mat-card/mat-card-content/form/div[3]/div[1]/app-signature/div/div[1]/div/canvas")));
-        jsx.executeScript("arguments[0].click();", element);
-        Thread.sleep(1000);
-        //Add name
-        JavascriptExecutor jsq = (JavascriptExecutor) driver;
-        element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/apptype-insurance/mat-card/mat-card-content/form/div[3]/div[1]/app-signature/div/div[2]/div/mat-form-field/div/div[1]/div[3]/input")));
-        jsq.executeScript("arguments[0].click();", element);
-        jsq.executeScript("arguments[0].value='ABC Name'", element);
-        Thread.sleep(1000);
-        JavascriptExecutor jsh = (JavascriptExecutor) driver;
-        element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//html")));
-        jsh.executeScript("arguments[0].click();", element);
+                .until(ExpectedConditions.presenceOfElementLocated(By.id("mat-input-7")));
+        element.sendKeys("Test test");
 
+        Thread.sleep(1000);
+        ((JavascriptExecutor) driver)
+                .executeScript("window.scrollTo(0, document.body.scrollHeight)");
         Thread.sleep(1000);
 
         JavascriptExecutor jse = (JavascriptExecutor) driver;

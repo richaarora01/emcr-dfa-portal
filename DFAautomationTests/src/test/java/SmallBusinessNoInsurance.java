@@ -22,7 +22,7 @@ public class SmallBusinessNoInsurance {
     private WebDriver driver;
 
 
- /*   @After
+    @After
     public void tearDown() {
         driver.close();
         driver.quit();
@@ -30,7 +30,7 @@ public class SmallBusinessNoInsurance {
     @AfterClass
     public static void afterClass() {
         CustomWebDriverManager.instance = null;
-    }*/
+    }
 
 
     @Test
@@ -132,25 +132,29 @@ public class SmallBusinessNoInsurance {
         new WebDriverWait(driver, Duration.ofSeconds(60)).until(
                 ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(text(), 'Select an application type')]")));
         Thread.sleep(1000);
-        //sign
+        //Crear Small business apl
+        //General or Sole Proprietorship or DBA name
+        JavascriptExecutor jsab = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='radio' and @value='General']")));
+        Thread.sleep(1000);
+        jsab.executeScript("arguments[0].click();", element);
+        Thread.sleep(1000);
         JavascriptExecutor js39 = (JavascriptExecutor) driver;
         element = driverWait
                 .until(ExpectedConditions.presenceOfElementLocated(By.id("canvas")));
         js39.executeScript("arguments[0].click();", element);
-        //Add name
-        JavascriptExecutor jsc = (JavascriptExecutor) driver;
-        element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/apptype-insurance/mat-card/mat-card-content/form/div[3]/div[1]/app-signature/div/div[2]/div/mat-form-field/div/div[1]/div[3]/input")));
-        jsc.executeScript("arguments[0].click();", element);
-        jsc.executeScript("arguments[0].value='Test Name'", element);
-
-        //General or Sole Proprietorship or DBA name
+        Thread.sleep(1000);
         JavascriptExecutor jsa = (JavascriptExecutor) driver;
         element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='radio' and @value='General']")));
-        Thread.sleep(1000);
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/apptype-insurance/mat-card/mat-card-content/form/div[3]/div[1]/app-signature/div/div[2]/div/mat-form-field/div/div[1]/div[3]/input")));
         jsa.executeScript("arguments[0].click();", element);
+        element.sendKeys("Test test");
+
         Thread.sleep(1000);
+        ((JavascriptExecutor) driver)
+                .executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        Thread.sleep(2000);
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         element = driverWait
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Damaged Property ')]")));

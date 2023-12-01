@@ -18,7 +18,7 @@ public class ResidentialTenantNInsurance {
     private WebDriver driver;
 
 
-/*    @After
+    @After
     public void tearDown() {
         driver.close();
         driver.quit();
@@ -26,7 +26,7 @@ public class ResidentialTenantNInsurance {
     @AfterClass
     public static void afterClass() {
         CustomWebDriverManager.instance = null;
-    }*/
+    }
 
 
     @Test
@@ -129,48 +129,23 @@ public class ResidentialTenantNInsurance {
         new WebDriverWait(driver, Duration.ofSeconds(60)).until(
                 ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(text(), 'Select an application type')]")));
         Thread.sleep(1000);
-        //Create Homeowner appl
+        //Create residential appl
         JavascriptExecutor js39 = (JavascriptExecutor) driver;
         element = driverWait
                 .until(ExpectedConditions.presenceOfElementLocated(By.id("canvas")));
         js39.executeScript("arguments[0].click();", element);
         Thread.sleep(1000);
-        //Add name
-        JavascriptExecutor jsc = (JavascriptExecutor) driver;
         element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/apptype-insurance/mat-card/mat-card-content/form/div[3]/div[1]/app-signature/div/div[2]/div/mat-form-field/div/div[1]/div[3]/input")));
-        jsc.executeScript("arguments[0].click();", element);
-        jsc.executeScript("arguments[0].value='Test Name'", element);
+                .until(ExpectedConditions.presenceOfElementLocated(By.id("mat-input-7")));
+        element.sendKeys("Test test");
+
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.id("mat-input-9")));
+        element.sendKeys("Second Name");
         Thread.sleep(1000);
-        JavascriptExecutor jsd = (JavascriptExecutor) driver;
-        element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/apptype-insurance/mat-card/mat-card-content/form/div[3]/div[2]/app-signature/div/div[2]/div/mat-form-field/div/div[1]/div[3]/input")));
-        jsd.executeScript("arguments[0].click();", element);
-        jsd.executeScript("arguments[0].value='Test Name'", element);
-        JavascriptExecutor jsn = (JavascriptExecutor) driver;
-        element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/apptype-insurance/mat-card/mat-card-content/form/div[3]/div[2]/app-signature/div/div[1]/div/canvas")));
-        jsn.executeScript("arguments[0].click();", element);
-        Thread.sleep(1000);
-        JavascriptExecutor jsx = (JavascriptExecutor) driver;
-        element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/apptype-insurance/mat-card/mat-card-content/form/div[3]/div[1]/app-signature/div/div[1]/div/canvas")));
-        jsx.executeScript("arguments[0].click();", element);
-        Thread.sleep(1000);
-        //Add name
-        JavascriptExecutor jsq = (JavascriptExecutor) driver;
-        element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/apptype-insurance/mat-card/mat-card-content/form/div[3]/div[1]/app-signature/div/div[2]/div/mat-form-field/div/div[1]/div[3]/input")));
-        jsq.executeScript("arguments[0].click();", element);
-        jsq.executeScript("arguments[0].value='ABC Name'", element);
-        Thread.sleep(1000);
-        JavascriptExecutor jsh = (JavascriptExecutor) driver;
-        element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//html")));
-        jsh.executeScript("arguments[0].click();", element);
-        Thread.sleep(1000);
-       ((JavascriptExecutor) driver)
+        ((JavascriptExecutor) driver)
                 .executeScript("window.scrollTo(0, document.body.scrollHeight)");
+
 
         Thread.sleep(1000);
         new WebDriverWait(driver, Duration.ofSeconds(60)).until(
@@ -189,16 +164,15 @@ public class ResidentialTenantNInsurance {
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[1]/app-component-wrapper/app-damaged-property-address/mat-card/mat-card-content/form/div[1]/div/mat-radio-group/mat-radio-button[2]/label/span[1]/span[1]")));
         js100.executeScript("arguments[0].click();", element);
         Thread.sleep(1000);
-        JavascriptExecutor js5 = (JavascriptExecutor) driver;
+        JavascriptExecutor js101 = (JavascriptExecutor) driver;
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[1]/app-component-wrapper/app-damaged-property-address/mat-card/mat-card-content/form/div[1]/div/mat-radio-group/div[2]/app-bc-address/div/div[1]/div[1]/mat-form-field/div/div[1]/div[3]/input")));
-        js5.executeScript("arguments[0].scrollIntoView(true);", element);
-        element.sendKeys("3220 Test");
+        js101.executeScript("arguments[0].scrollIntoView(true);", element);
+        element.sendKeys("3220 Quadra");
         Thread.sleep(1000);
-        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[1]/app-component-wrapper/app-damaged-property-address/mat-card/mat-card-content/form/div[1]/div/mat-radio-group/div[2]/app-bc-address/div/div[3]/div/mat-form-field/div/div[1]/div[3]/input")));
-        element.sendKeys("Victoria");
-        //Thread.sleep(1000);
-        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[1]/app-component-wrapper/app-damaged-property-address/mat-card/mat-card-content/form/div[1]/div/mat-radio-group/div[2]/app-bc-address/div/div[5]/div/mat-form-field/div/div[1]/div[3]/input")));
-        element.sendKeys("V8X1G3");
+        JavascriptExecutor js110 = (JavascriptExecutor) driver;
+        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' 3220 Quadra St, Victoria, BC, V8X 1G3 ')]")));
+        js110.executeScript("arguments[0].click();", element);
+        Thread.sleep(1000);
 
         //Questions
         Thread.sleep(2000);
