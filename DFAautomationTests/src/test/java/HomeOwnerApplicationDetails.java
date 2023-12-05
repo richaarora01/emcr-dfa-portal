@@ -329,6 +329,7 @@ public class HomeOwnerApplicationDetails {
         js39.executeScript("arguments[0].click();", element);
     }
     public void submit(WebElement element, WebDriverWait driverWait, WebDriver driver) throws Exception{
+        Thread.sleep(1000);
         JavascriptExecutor js42= (JavascriptExecutor) driver;
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Sign & Submit ')]")));
         js42.executeScript("arguments[0].click();", element);

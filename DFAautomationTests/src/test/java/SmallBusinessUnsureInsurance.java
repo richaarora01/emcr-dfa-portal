@@ -18,7 +18,7 @@ public class SmallBusinessUnsureInsurance {
     private WebDriver driver;
 
 
-    @After
+/*    @After
     public void tearDown() {
         driver.close();
         driver.quit();
@@ -26,7 +26,7 @@ public class SmallBusinessUnsureInsurance {
     @AfterClass
     public static void afterClass() {
         CustomWebDriverManager.instance = null;
-    }
+    }*/
 
 
     @Test
@@ -146,6 +146,7 @@ public class SmallBusinessUnsureInsurance {
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Yes, I have selected the correct')]")));
         jsf.executeScript("arguments[0].click();", element);
 
+
         //wait for address to be popolated
         SmallBusinessNoInsurance addQuestion = new SmallBusinessNoInsurance();
         addQuestion.addressAndQuestion(element, driverWait, driver);
@@ -200,6 +201,5 @@ public class SmallBusinessUnsureInsurance {
         //Sign and Submit
         HomeOwnerApplicationDetails signSubmit = new HomeOwnerApplicationDetails();
         signSubmit.submit(element, driverWait, driver);
-
     }
 }

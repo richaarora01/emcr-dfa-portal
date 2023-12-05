@@ -239,10 +239,19 @@ public class SmallBusinessNoInsurance {
         js5.executeScript("arguments[0].scrollIntoView(true);", element);
         element.sendKeys("3220 Quadra");
         Thread.sleep(1000);
-        JavascriptExecutor js110 = (JavascriptExecutor) driver;
+/*        JavascriptExecutor js110 = (JavascriptExecutor) driver;
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' 3220 Quadra St, Victoria, BC, V8X 1G3 ')]")));
-        js110.executeScript("arguments[0].click();", element);
-        
+        js110.executeScript("arguments[0].click();", element);*/
+        Thread.sleep(1000);
+        JavascriptExecutor jsa1 = (JavascriptExecutor) driver;
+        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[1]/app-component-wrapper/app-damaged-property-address/mat-card/mat-card-content/form/div[1]/div/mat-radio-group/div[2]/app-bc-address/div/div[3]/div/mat-form-field/div/div[1]/div[3]/input")));
+        jsa1.executeScript("arguments[0].scrollIntoView(true);", element);
+        element.sendKeys("Victoria");
+        Thread.sleep(1000);
+        JavascriptExecutor jsa2 = (JavascriptExecutor) driver;
+        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[1]/app-component-wrapper/app-damaged-property-address/mat-card/mat-card-content/form/div[1]/div/mat-radio-group/div[2]/app-bc-address/div/div[5]/div/mat-form-field/div/div[1]/div[3]/input")));
+        jsa2.executeScript("arguments[0].scrollIntoView(true);", element);
+        element.sendKeys("V8X1G4");
         //Questions
         Thread.sleep(1000);
         JavascriptExecutor js22 = (JavascriptExecutor) driver;
