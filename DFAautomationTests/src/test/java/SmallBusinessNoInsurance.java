@@ -22,7 +22,7 @@ public class SmallBusinessNoInsurance {
     private WebDriver driver;
 
 
-/*    @After
+    @After
     public void tearDown() {
         driver.close();
         driver.quit();
@@ -30,7 +30,7 @@ public class SmallBusinessNoInsurance {
     @AfterClass
     public static void afterClass() {
         CustomWebDriverManager.instance = null;
-    }*/
+    }
 
 
     @Test
@@ -75,7 +75,7 @@ public class SmallBusinessNoInsurance {
 
         JavascriptExecutor js14 = (JavascriptExecutor) driver;
         element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"mat-datepicker-0\"]/div/mat-month-view/table/tbody/tr[1]/td[2]/button/div[1]")));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[2]/div[2]/div/mat-datepicker-content/div[2]/mat-calendar/div/mat-month-view/table/tbody/tr[3]/td[2]/button/div[1]")));
         js14.executeScript("arguments[0].click();", element);
 
         JavascriptExecutor js15 = (JavascriptExecutor) driver;
@@ -116,6 +116,11 @@ public class SmallBusinessNoInsurance {
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Verify Your Profile ')]")));
         js32.executeScript("arguments[0].click();", element);
         Thread.sleep(1000);
+        JavascriptExecutor js36 = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[2]/app-component-wrapper/app-profile-verification/mat-card/mat-card-content/form/mat-card-content[3]/div[2]/mat-radio-group/mat-radio-button[1]/label/span[1]/span[1]")));
+        js36.executeScript("arguments[0].click();", element);
+        Thread.sleep(1000);
         JavascriptExecutor js35 = (JavascriptExecutor) driver;
         element = driverWait
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[2]/app-component-wrapper/app-profile-verification/mat-card/mat-card-content/form/mat-card-content[5]/div[2]/div[2]/div[2]/mat-form-field/div/div[1]/div[3]/input")));
@@ -150,6 +155,10 @@ public class SmallBusinessNoInsurance {
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/apptype-insurance/mat-card/mat-card-content/form/div[3]/div[1]/app-signature/div/div[2]/div/mat-form-field/div/div[1]/div[3]/input")));
         jsa.executeScript("arguments[0].click();", element);
         element.sendKeys("Test test");
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.id("mat-input-9")));
+        element.sendKeys("Second Name");
+        Thread.sleep(1000);
 
         Thread.sleep(1000);
         ((JavascriptExecutor) driver)
@@ -238,12 +247,12 @@ public class SmallBusinessNoInsurance {
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[1]/app-component-wrapper/app-damaged-property-address/mat-card/mat-card-content/form/div[1]/div/mat-radio-group/div[2]/app-bc-address/div/div[1]/div[1]/mat-form-field/div/div[1]/div[3]/input")));
         js5.executeScript("arguments[0].scrollIntoView(true);", element);
         element.sendKeys("3220 Quadra");
-        Thread.sleep(1000);
+/*        Thread.sleep(1000);
         JavascriptExecutor js110 = (JavascriptExecutor) driver;
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' 3220 Quadra St, Victoria, BC, V8X 1G3 ')]")));
-        js110.executeScript("arguments[0].click();", element);
+        js110.executeScript("arguments[0].click();", element);*/
         Thread.sleep(1000);
-/*        JavascriptExecutor jsa1 = (JavascriptExecutor) driver;
+        JavascriptExecutor jsa1 = (JavascriptExecutor) driver;
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[1]/app-component-wrapper/app-damaged-property-address/mat-card/mat-card-content/form/div[1]/div/mat-radio-group/div[2]/app-bc-address/div/div[3]/div/mat-form-field/div/div[1]/div[3]/input")));
         jsa1.executeScript("arguments[0].scrollIntoView(true);", element);
         element.sendKeys("Victoria");
@@ -251,7 +260,7 @@ public class SmallBusinessNoInsurance {
         JavascriptExecutor jsa2 = (JavascriptExecutor) driver;
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[1]/app-component-wrapper/app-damaged-property-address/mat-card/mat-card-content/form/div[1]/div/mat-radio-group/div[2]/app-bc-address/div/div[5]/div/mat-form-field/div/div[1]/div[3]/input")));
         jsa2.executeScript("arguments[0].scrollIntoView(true);", element);
-        element.sendKeys("V8X1G4");*/
+        element.sendKeys("V8X1G4");
         //Questions
         Thread.sleep(1000);
         JavascriptExecutor js22 = (JavascriptExecutor) driver;
@@ -272,7 +281,7 @@ public class SmallBusinessNoInsurance {
         JavascriptExecutor jsh1 = (JavascriptExecutor) driver;
         element = driverWait
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[1]/app-component-wrapper/app-damaged-property-address/mat-card/mat-card-content/form/div[6]/div/mat-form-field/div/div[1]/div[3]/input")));
-        jsh1.executeScript("arguments[0].value='Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m'", element);
+        jsh1.executeScript("arguments[0].value='Lorem ipsum dolor sit amet'", element);
         //Is your home a manufactured home?
         JavascriptExecutor js21 = (JavascriptExecutor) driver;
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[1]/app-component-wrapper/app-damaged-property-address/mat-card/mat-card-content/form/div[7]/div/mat-radio-group/mat-radio-button[1]/label/span[1]/span[1]")));
@@ -340,7 +349,7 @@ public class SmallBusinessNoInsurance {
         js8.executeScript("arguments[0].click();", element);
         Thread.sleep(1000);
         JavascriptExecutor js81= (JavascriptExecutor) driver;
-        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[3]/div[2]/div/div/div/mat-option[2]/span")));
+        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[2]/div[2]/div/div/div/mat-option[2]/span")));
         js81.executeScript("arguments[0].click();", element);
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/app-occupants/mat-card/mat-card-content/form[1]/div/div/div/mat-card/div[1]/div[2]/mat-form-field/div/div[1]/div[3]/input")).sendKeys("Lorem ipsum dolor si");

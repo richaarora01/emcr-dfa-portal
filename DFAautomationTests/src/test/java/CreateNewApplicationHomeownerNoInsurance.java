@@ -73,7 +73,7 @@ public class CreateNewApplicationHomeownerNoInsurance {
 
         JavascriptExecutor js14 = (JavascriptExecutor) driver;
         element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"mat-datepicker-0\"]/div/mat-month-view/table/tbody/tr[1]/td[2]/button/div[1]")));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[2]/div[2]/div/mat-datepicker-content/div[2]/mat-calendar/div/mat-month-view/table/tbody/tr[3]/td[2]/button/div[1]")));
         js14.executeScript("arguments[0].click();", element);
 
         JavascriptExecutor js15 = (JavascriptExecutor) driver;
@@ -113,6 +113,11 @@ public class CreateNewApplicationHomeownerNoInsurance {
         element = driverWait
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Verify Your Profile ')]")));
         js32.executeScript("arguments[0].click();", element);
+        Thread.sleep(1000);
+        JavascriptExecutor js36 = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[2]/app-component-wrapper/app-profile-verification/mat-card/mat-card-content/form/mat-card-content[3]/div[2]/mat-radio-group/mat-radio-button[1]/label/span[1]/span[1]")));
+        js36.executeScript("arguments[0].click();", element);
         Thread.sleep(1000);
         JavascriptExecutor js35 = (JavascriptExecutor) driver;
         element = driverWait
