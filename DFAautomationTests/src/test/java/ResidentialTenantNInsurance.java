@@ -71,7 +71,7 @@ public class ResidentialTenantNInsurance {
 
         JavascriptExecutor js14 = (JavascriptExecutor) driver;
         element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"mat-datepicker-0\"]/div/mat-month-view/table/tbody/tr[1]/td[2]/button/div[1]")));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[2]/div[2]/div/mat-datepicker-content/div[2]/mat-calendar/div/mat-month-view/table/tbody/tr[3]/td[2]/button/div[1]")));
         js14.executeScript("arguments[0].click();", element);
 
         JavascriptExecutor js15 = (JavascriptExecutor) driver;
@@ -112,6 +112,11 @@ public class ResidentialTenantNInsurance {
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Verify Your Profile ')]")));
         js32.executeScript("arguments[0].click();", element);
         Thread.sleep(1000);
+        JavascriptExecutor js36 = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[2]/app-component-wrapper/app-profile-verification/mat-card/mat-card-content/form/mat-card-content[3]/div[2]/mat-radio-group/mat-radio-button[1]/label/span[1]/span[1]")));
+        js36.executeScript("arguments[0].click();", element);
+        Thread.sleep(1000);
         JavascriptExecutor js35 = (JavascriptExecutor) driver;
         element = driverWait
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[2]/app-component-wrapper/app-profile-verification/mat-card/mat-card-content/form/mat-card-content[5]/div[2]/div[2]/div[2]/mat-form-field/div/div[1]/div[3]/input")));
@@ -136,11 +141,11 @@ public class ResidentialTenantNInsurance {
         js39.executeScript("arguments[0].click();", element);
         Thread.sleep(1000);
         element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.id("mat-input-7")));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/apptype-insurance/mat-card/mat-card-content/form/div[3]/div[1]/app-signature/div/div[2]/div/mat-form-field/div/div[1]/div[3]/input")));
         element.sendKeys("Test test");
 
         element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.id("mat-input-9")));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/apptype-insurance/mat-card/mat-card-content/form/div[3]/div[2]/app-signature/div/div[2]/div/mat-form-field/div/div[1]/div[3]/input")));
         element.sendKeys("Second Name");
         Thread.sleep(1000);
         ((JavascriptExecutor) driver)

@@ -18,7 +18,7 @@ public class ResidentialTenantUInsurance {
     private WebDriver driver;
 
 
- /*   @After
+    @After
     public void tearDown() {
         driver.close();
         driver.quit();
@@ -26,7 +26,7 @@ public class ResidentialTenantUInsurance {
     @AfterClass
     public static void afterClass() {
         CustomWebDriverManager.instance = null;
-    }*/
+    }
 
 
     @Test
@@ -71,7 +71,7 @@ public class ResidentialTenantUInsurance {
 
         JavascriptExecutor js14 = (JavascriptExecutor) driver;
         element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"mat-datepicker-0\"]/div/mat-month-view/table/tbody/tr[1]/td[2]/button/div[1]")));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[2]/div[2]/div/mat-datepicker-content/div[2]/mat-calendar/div/mat-month-view/table/tbody/tr[3]/td[2]/button/div[1]")));
         js14.executeScript("arguments[0].click();", element);
 
         JavascriptExecutor js15 = (JavascriptExecutor) driver;
@@ -111,6 +111,11 @@ public class ResidentialTenantUInsurance {
         element = driverWait
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Verify Your Profile ')]")));
         js32.executeScript("arguments[0].click();", element);
+        Thread.sleep(1000);
+        JavascriptExecutor js36 = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-start/div/mat-horizontal-stepper/div/div[2]/div[2]/app-component-wrapper/app-profile-verification/mat-card/mat-card-content/form/mat-card-content[3]/div[2]/mat-radio-group/mat-radio-button[1]/label/span[1]/span[1]")));
+        js36.executeScript("arguments[0].click();", element);
         Thread.sleep(1000);
         JavascriptExecutor js35 = (JavascriptExecutor) driver;
         element = driverWait
@@ -172,11 +177,11 @@ public class ResidentialTenantUInsurance {
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[1]/app-component-wrapper/app-damaged-property-address/mat-card/mat-card-content/form/div[1]/div/mat-radio-group/div[2]/app-bc-address/div/div[1]/div[1]/mat-form-field/div/div[1]/div[3]/input")));
         js101.executeScript("arguments[0].scrollIntoView(true);", element);
         element.sendKeys("3220 Quadra");
-/*        Thread.sleep(1000);
+        Thread.sleep(1000);
         JavascriptExecutor js110 = (JavascriptExecutor) driver;
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' 3220 Quadra St, Victoria, BC, V8X 1G3 ')]")));
-        js110.executeScript("arguments[0].click();", element);*/
-        Thread.sleep(2000);
+        js110.executeScript("arguments[0].click();", element);
+/*        Thread.sleep(2000);
         JavascriptExecutor jsa1 = (JavascriptExecutor) driver;
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[1]/app-component-wrapper/app-damaged-property-address/mat-card/mat-card-content/form/div[1]/div/mat-radio-group/div[2]/app-bc-address/div/div[3]/div/mat-form-field/div/div[1]/div[3]/input")));
         jsa1.executeScript("arguments[0].scrollIntoView(true);", element);
@@ -185,7 +190,7 @@ public class ResidentialTenantUInsurance {
         JavascriptExecutor jsa2 = (JavascriptExecutor) driver;
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[1]/app-component-wrapper/app-damaged-property-address/mat-card/mat-card-content/form/div[1]/div/mat-radio-group/div[2]/app-bc-address/div/div[5]/div/mat-form-field/div/div[1]/div[3]/input")));
         jsa2.executeScript("arguments[0].scrollIntoView(true);", element);
-        element.sendKeys("V8X1G4");
+        element.sendKeys("V8X1G4");*/
 
         //Questions
         Thread.sleep(1000);

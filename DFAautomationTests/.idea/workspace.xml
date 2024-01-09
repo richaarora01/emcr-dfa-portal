@@ -6,11 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="2e2c1a18-e64c-44c1-869d-cdbed49dcc8f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FarmUnsureInsurance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FarmUnsureInsurance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/HmeownerUnsureInsurance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HmeownerUnsureInsurance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SmallBusinessNoInsurance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SmallBusinessNoInsurance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/FarmUnsureInsurance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/FarmUnsureInsurance.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SmallBusinessNoInsurance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SmallBusinessNoInsurance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/EditApplicationHomeownerNInsurance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EditApplicationHomeownerNInsurance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ResidentialTenantNInsurance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ResidentialTenantNInsurance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ResidentialTenantUInsurance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ResidentialTenantUInsurance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SmallBusinessUnsureInsurance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SmallBusinessUnsureInsurance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/EditApplicationHomeownerNInsurance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/EditApplicationHomeownerNInsurance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/HmeownerUnsureInsurance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HmeownerUnsureInsurance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ResidentialTenantNInsurance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ResidentialTenantNInsurance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ResidentialTenantUInsurance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ResidentialTenantUInsurance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SmallBusinessUnsureInsurance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SmallBusinessUnsureInsurance.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,17 +68,27 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.AddCleanLogAndDamageAfterSubmit.executor": "Run",
     "JUnit.CharitableOrganizationNoInsurance.test.executor": "Run",
     "JUnit.CharitableOrganizationUnsureInsurance.executor": "Run",
     "JUnit.CreateNewApplicationHomeownerNoInsurance.test.executor": "Run",
+    "JUnit.EditApplicationHomeownerNInsurance.executor": "Run",
+    "JUnit.EditApplicationHomeownerNInsurance.test.executor": "Run",
     "JUnit.FarmNoInsurance.executor": "Run",
     "JUnit.FarmNoInsurance.test.executor": "Run",
     "JUnit.FarmUnsureInsurance.executor": "Run",
     "JUnit.FarmUnsureInsurance.test.executor": "Run",
     "JUnit.HmeownerUnsureInsurance.executor": "Run",
+    "JUnit.HomeOwnerApplicationDetails.executor": "Run",
+    "JUnit.HomeOwnerWithnsurance.executor": "Run",
     "JUnit.Login.test.executor": "Run",
+    "JUnit.Logout.executor": "Run",
+    "JUnit.ResidentialTenantNInsurance.executor": "Run",
+    "JUnit.ResidentialTenantNInsurance.test.executor": "Run",
+    "JUnit.ResidentialTenantUInsurance.executor": "Run",
     "JUnit.SmallBusinessNoInsurance.executor": "Run",
     "JUnit.SmallBusinessNoInsurance.test.executor": "Run",
+    "JUnit.SmallBusinessUnsureInsurance.executor": "Run",
     "Maven.DFAautomationTests [clean].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -92,11 +106,11 @@
       <recent name="C:\workspace4\emcr-dfa-portal\DFAautomationTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HmeownerUnsureInsurance">
-    <configuration name="FarmUnsureInsurance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.EditApplicationHomeownerNInsurance">
+    <configuration name="AddCleanLogAndDamageAfterSubmit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DFAautomationTests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FarmUnsureInsurance" />
+      <option name="MAIN_CLASS_NAME" value="AddCleanLogAndDamageAfterSubmit" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <envs>
@@ -107,26 +121,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FarmUnsureInsurance.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EditApplicationHomeownerNInsurance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DFAautomationTests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FarmUnsureInsurance" />
+      <option name="MAIN_CLASS_NAME" value="EditApplicationHomeownerNInsurance" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <envs>
+        <env name="USERNAME_BCEID" value="DFA00004" />
+        <env name="PASSWORD_BCEID" value="98900004" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EditApplicationHomeownerNInsurance.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DFAautomationTests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="EditApplicationHomeownerNInsurance" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
-      <envs>
-        <env name="USERNAME_BCEID" value="DFA00004" />
-        <env name="PASSWORD_BCEID" value="98900004" />
-      </envs>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HmeownerUnsureInsurance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DFAautomationTests" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="HmeownerUnsureInsurance" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
       <envs>
         <env name="USERNAME_BCEID" value="DFA00004" />
         <env name="PASSWORD_BCEID" value="98900004" />
@@ -137,8 +151,6 @@
     </configuration>
     <configuration name="SmallBusinessNoInsurance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DFAautomationTests" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-21" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SmallBusinessNoInsurance" />
       <option name="METHOD_NAME" value="" />
@@ -151,12 +163,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SmallBusinessNoInsurance.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SmallBusinessUnsureInsurance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DFAautomationTests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SmallBusinessNoInsurance" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="SmallBusinessUnsureInsurance" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
       <envs>
         <env name="USERNAME_BCEID" value="DFA00004" />
         <env name="PASSWORD_BCEID" value="98900004" />
@@ -166,19 +178,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.HmeownerUnsureInsurance" />
-      <item itemvalue="JUnit.FarmUnsureInsurance.test" />
-      <item itemvalue="JUnit.FarmUnsureInsurance" />
-      <item itemvalue="JUnit.SmallBusinessNoInsurance.test" />
+      <item itemvalue="JUnit.EditApplicationHomeownerNInsurance.test" />
+      <item itemvalue="JUnit.EditApplicationHomeownerNInsurance" />
+      <item itemvalue="JUnit.AddCleanLogAndDamageAfterSubmit" />
+      <item itemvalue="JUnit.SmallBusinessUnsureInsurance" />
       <item itemvalue="JUnit.SmallBusinessNoInsurance" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HmeownerUnsureInsurance" />
-        <item itemvalue="JUnit.FarmUnsureInsurance.test" />
-        <item itemvalue="JUnit.FarmUnsureInsurance" />
+        <item itemvalue="JUnit.EditApplicationHomeownerNInsurance" />
+        <item itemvalue="JUnit.EditApplicationHomeownerNInsurance.test" />
+        <item itemvalue="JUnit.AddCleanLogAndDamageAfterSubmit" />
+        <item itemvalue="JUnit.SmallBusinessUnsureInsurance" />
         <item itemvalue="JUnit.SmallBusinessNoInsurance" />
-        <item itemvalue="JUnit.SmallBusinessNoInsurance.test" />
       </list>
     </recent_temporary>
   </component>
