@@ -16,7 +16,7 @@ public class CreateProfile {
 
     private WebDriver driver;
 
-    @After
+/*    @After
     public void tearDown() {
         driver.close();
         driver.quit();
@@ -24,7 +24,7 @@ public class CreateProfile {
     @AfterClass
     public static void afterClass() {
         CustomWebDriverManager.instance = null;
-    }
+    }*/
 
 
     @Test
@@ -45,9 +45,9 @@ public class CreateProfile {
         //Check the first and last name are polled
 
         new WebDriverWait(driver, Duration.ofSeconds(60)).until(
-                ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), 'PHSAPOC')]")));
+                ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), 'TRENTEDEUX')]")));
         new WebDriverWait(driver, Duration.ofSeconds(60)).until(
-                ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), 'EIGHT')]")));
+                ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), 'THIRTYONE')]")));
 
         JavascriptExecutor js1 = (JavascriptExecutor) driver;
 //        //Scroll down till the bottom of the page
@@ -71,11 +71,11 @@ public class CreateProfile {
         Thread.sleep(1000);
         //Address Check
         new WebDriverWait(driver, Duration.ofSeconds(30)).until(
-                ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), '123 FIRST STREET')]")));
+                ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), '2110-1920 OLD OKANAGAN HWY')]")));
         new WebDriverWait(driver, Duration.ofSeconds(60)).until(
-                ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), 'VICTORIA')]")));
+                ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), 'WESTBANK')]")));
         new WebDriverWait(driver, Duration.ofSeconds(60)).until(
-                ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), 'V8V8V8')]")));
+                ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), 'V4T3K6')]")));
         //Scroll down till the bottom of the page
         Thread.sleep(1000);
         JavascriptExecutor js3 = (JavascriptExecutor) driver;
@@ -88,7 +88,11 @@ public class CreateProfile {
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-verified-registration/app-profile/div/mat-horizontal-stepper/div/div[2]/div[2]/app-component-wrapper/app-address/form/mat-card[2]/mat-card-content/div[2]/div/app-can-address/form/div[1]/div/mat-form-field/div/div[1]/div[3]/input")));
         js22.executeScript("arguments[0].click();", element);
         element.sendKeys("Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m");
-        JavascriptExecutor js23 = (JavascriptExecutor) driver;
+        Thread.sleep(1000);
+        JavascriptExecutor js110 = (JavascriptExecutor) driver;
+        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' 43 Remi Rd, Tiny, ON, L9M 0M7 ')]")));
+        js110.executeScript("arguments[0].click();", element);
+/*        JavascriptExecutor js23 = (JavascriptExecutor) driver;
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-verified-registration/app-profile/div/mat-horizontal-stepper/div/div[2]/div[2]/app-component-wrapper/app-address/form/mat-card[2]/mat-card-content/div[2]/div/app-can-address/form/div[2]/div/mat-form-field/div/div[1]/div[3]/input")));
         js23.executeScript("arguments[0].click();", element);
         element.sendKeys("Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m");
@@ -103,7 +107,7 @@ public class CreateProfile {
         JavascriptExecutor js26 = (JavascriptExecutor) driver;
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-verified-registration/app-profile/div/mat-horizontal-stepper/div/div[2]/div[2]/app-component-wrapper/app-address/form/mat-card[2]/mat-card-content/div[2]/div/app-can-address/form/div[5]/div/mat-form-field/div/div[1]/div[3]/input")));
         js26.executeScript("arguments[0].click();", element);
-        element.sendKeys("BC");
+        element.sendKeys("BC");*/
         //To be commented out
         Thread.sleep(1000);
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
@@ -117,10 +121,15 @@ public class CreateProfile {
         element = driverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/app-root/div/main/div/app-verified-registration/app-profile/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/app-contact-info/mat-card/mat-card-content/form/div[2]/div/mat-form-field[1]/div/div[1]/div[3]/input")));
         js5.executeScript("arguments[0].scrollIntoView(true);", element);
         element.sendKeys("999-999-9999");
- /*       js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
         Thread.sleep(1000);
-        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-verified-registration/app-profile/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/app-contact-info/mat-card/mat-card-content/form/div[4]/div/mat-form-field/div/div[1]/div[3]/input")));
-        element.sendKeys("test@test.com");*/
+        JavascriptExecutor js351 = (JavascriptExecutor) driver;
+        element = driverWait
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-verified-registration/app-profile/div/mat-horizontal-stepper/div/div[2]/div[3]/app-component-wrapper/app-contact-info/mat-card/mat-card-content/form/div[5]/div/mat-form-field/div/div[1]/div[3]")));
+        js351.executeScript("arguments[0].click();", element);
+        js351.executeScript("arguments[0].value='test@test.com'", element);
+        Thread.sleep(1000);
+        element.clear();
+        element.sendKeys("test@test.com");
         JavascriptExecutor js29 = (JavascriptExecutor) driver;
         element = driverWait
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Review & Submit ')]")));

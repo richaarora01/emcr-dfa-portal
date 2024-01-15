@@ -13,20 +13,21 @@ import java.time.Duration;
 
 import static dfa.CustomWebDriverManager.getDriver;
 
-public class HmeownerUnsureInsurance {
+public class NoValidatedAddressByCP {
 
     private WebDriver driver;
 
 
-/*    @After
+    @After
     public void tearDown() {
         driver.close();
         driver.quit();
     }
+
     @AfterClass
     public static void afterClass() {
         CustomWebDriverManager.instance = null;
-    }*/
+    }
 
 
     @Test
@@ -36,21 +37,11 @@ public class HmeownerUnsureInsurance {
         WebElement element = CustomWebDriverManager.getElement();
         CustomWebDriverManager.getElements();
 
-        HmeownerUnsureInsurance unsure = new HmeownerUnsureInsurance();
-        unsure.unsureInsurance(element, driverWait, driver);
 
-        //Sign and Submit
-        HomeOwnerApplicationDetails signSubmit = new HomeOwnerApplicationDetails();
-        signSubmit.submit(element, driverWait, driver);
-
-
-    }
-
-    public void unsureInsurance(WebElement element, WebDriverWait driverWait, WebDriver driver) throws Exception{
         Login login = new Login();
         login.test();
 
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         CreateNewApplicationHomeownerNoInsurance createAp = new CreateNewApplicationHomeownerNoInsurance();
         createAp.createAppl(element, driverWait, driver);
 
@@ -174,67 +165,38 @@ public class HmeownerUnsureInsurance {
         JavascriptExecutor js101 = (JavascriptExecutor) driver;
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[1]/app-component-wrapper/app-damaged-property-address/mat-card/mat-card-content/form/div[1]/div/mat-radio-group/div[2]/app-bc-address/div/div[1]/div[1]/mat-form-field/div/div[1]/div[3]/input")));
         js101.executeScript("arguments[0].scrollIntoView(true);", element);
-        element.sendKeys("3220 Quadra");
+        element.sendKeys("123 ABC");
         Thread.sleep(1000);
-        JavascriptExecutor js110 = (JavascriptExecutor) driver;
+/*        JavascriptExecutor js110 = (JavascriptExecutor) driver;
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' 3220 Quadra St, Victoria, BC, V8X 1G3 ')]")));
         js110.executeScript("arguments[0].click();", element);
-        Thread.sleep(1000);
+        Thread.sleep(1000);*/
+        JavascriptExecutor js102 = (JavascriptExecutor) driver;
+        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[1]/app-component-wrapper/app-damaged-property-address/mat-card/mat-card-content/form/div[1]/div/mat-radio-group/div[2]/app-bc-address/div/div[3]/div/mat-form-field/div/div[1]/div[3]/input")));
+        js102.executeScript("arguments[0].scrollIntoView(true);", element);
+        element.sendKeys("Test City");
+        JavascriptExecutor js103 = (JavascriptExecutor) driver;
+        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[1]/app-component-wrapper/app-damaged-property-address/mat-card/mat-card-content/form/div[1]/div/mat-radio-group/div[2]/app-bc-address/div/div[5]/div/mat-form-field/div/div[1]/div[3]/input")));
+        js103.executeScript("arguments[0].scrollIntoView(true);", element);
+        element.sendKeys("V8V 8V8");
 
         //Questions
 
         HomeOwnerApplicationDetails questions = new HomeOwnerApplicationDetails();
         questions.questionsOnDamaga(element, driverWait, driver);
 
+        //Go Review page and check the address no validated
         Thread.sleep(1000);
-        JavascriptExecutor js3111 = (JavascriptExecutor) driver;
-        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Cause of Damage ')]")));
-        js3111.executeScript("arguments[0].click();", element);
-        Thread.sleep(1000);
+       JavascriptExecutor js110 = (JavascriptExecutor) driver;
+        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), 'Review')]")));
+        js110.executeScript("arguments[0].click();", element);
 
-        HomeOwnerApplicationDetails damageAppl = new HomeOwnerApplicationDetails();
-        damageAppl.damage(element, driverWait, driver);
+        new WebDriverWait(driver, Duration.ofSeconds(60)).until(
+                ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(text(), 'Test City ')]")));
 
-        JavascriptExecutor js6= (JavascriptExecutor) driver;
-        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Occupants ')]")));
-        js6.executeScript("arguments[0].click();", element);
-        Thread.sleep(1000);
+        new WebDriverWait(driver, Duration.ofSeconds(60)).until(
+                ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(text(), '123 ABC')]")));
 
-        //add full time occupant
-        HomeOwnerApplicationDetails ocupantsAppl = new HomeOwnerApplicationDetails();
-        ocupantsAppl.ocupants(element, driverWait, driver);
-
-        JavascriptExecutor js7= (JavascriptExecutor) driver;
-        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Clean Up Log ')]")));
-        js7.executeScript("arguments[0].click();", element);
-
-        //CleanUp logs
-        HomeOwnerApplicationDetails clean = new HomeOwnerApplicationDetails();
-        clean.cleanLogs(element, driverWait, driver);
-
-        JavascriptExecutor js37= (JavascriptExecutor) driver;
-        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Supporting Documents ')]")));
-        js37.executeScript("arguments[0].click();", element);
-
-        //Add insurance template
-        Thread.sleep(2000);
-        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' + Add Insurance Template ')]")));
-        element.click();
-
-        Thread.sleep(1000);
-        WebElement uploadInsur = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.id("fileDrop")));
-        uploadInsur.sendKeys(System.getProperty("user.dir") + '/' + "dummy.pdf");
-
-        //Save
-        JavascriptExecutor js38= (JavascriptExecutor) driver;
-        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[6]/app-component-wrapper/app-supporting-documents/mat-card/mat-card-content/div[3]/div/app-dfa-attachment/form/div/mat-card/div[2]/div[2]/button")));
-        js38.executeScript("arguments[0].click();", element);
-        Thread.sleep(2000);
-
-
-        JavascriptExecutor js393= (JavascriptExecutor) driver;
-        element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' Next - Review Submission ')]")));
-        js393.executeScript("arguments[0].click();", element);
 
     }
 }
