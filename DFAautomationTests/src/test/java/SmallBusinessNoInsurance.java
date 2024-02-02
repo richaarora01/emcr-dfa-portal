@@ -75,7 +75,7 @@ public class SmallBusinessNoInsurance {
 
         JavascriptExecutor js14 = (JavascriptExecutor) driver;
         element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[2]/div[2]/div/mat-datepicker-content/div[2]/mat-calendar/div/mat-month-view/table/tbody/tr[3]/td[2]/button/div[1]")));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[2]/div[2]/div/mat-datepicker-content/div[2]/mat-calendar/div/mat-month-view/table/tbody/tr[1]/td[3]/button/div[1]")));
         js14.executeScript("arguments[0].click();", element);
 
         JavascriptExecutor js15 = (JavascriptExecutor) driver;

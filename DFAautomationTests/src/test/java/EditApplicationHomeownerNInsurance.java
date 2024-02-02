@@ -74,7 +74,7 @@ public class EditApplicationHomeownerNInsurance {
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/app-root/div/main/div/app-dfa-application-main/div/mat-horizontal-stepper/div/div[2]/div[1]/app-component-wrapper/app-damaged-property-address/mat-card/mat-card-content/form/div[1]/div/mat-radio-group/div[2]/app-bc-address/div/div[1]/div[1]/mat-form-field/div/div[1]/div[3]/input")));
         js51.executeScript("arguments[0].scrollIntoView(true);", element);
         element.clear();
-        element.sendKeys("9999 Test");
+        element.sendKeys("999");
         Thread.sleep(1000);
         JavascriptExecutor js110 = (JavascriptExecutor) driver;
         element = driverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(), ' 9-3235 Alder St, Victoria, BC, V8X 1P3 ')]")));
