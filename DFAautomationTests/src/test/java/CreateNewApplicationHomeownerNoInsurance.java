@@ -18,7 +18,7 @@ public class CreateNewApplicationHomeownerNoInsurance {
     private WebDriver driver;
 
 
-/*    @After
+    @After
     public void tearDown() {
         driver.close();
         driver.quit();
@@ -26,7 +26,7 @@ public class CreateNewApplicationHomeownerNoInsurance {
     @AfterClass
     public static void afterClass() {
         CustomWebDriverManager.instance = null;
-    }*/
+    }
 
 
     @Test
@@ -83,12 +83,12 @@ public class CreateNewApplicationHomeownerNoInsurance {
 
         JavascriptExecutor js16 = (JavascriptExecutor) driver;
         element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"mat-option-0\"]/span")));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"mat-radio-3\"]/label/span[1]/span[1]")));
         js16.executeScript("arguments[0].click();", element);
 
         JavascriptExecutor js17 = (JavascriptExecutor) driver;
         element = driverWait
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"mat-radio-3\"]/label/span[1]/span[1]")));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"mat-radio-6\"]/label/span[1]/span[1]")));
         js17.executeScript("arguments[0].click();", element);
 
         JavascriptExecutor js18 = (JavascriptExecutor) driver;
