@@ -6,10 +6,6 @@ on:
     branches:
       - 'feature/workflows'
 
-    paths:
-      - "dfa/src/API/**"
-      - ".github/workflows/cd-dfa-portal-project-api.yml"
-  workflow_dispatch:
 env:
   IMAGE_NAME: dfa-portal-api
   WORKING_DIRECTORY: ./dfa/src/API
