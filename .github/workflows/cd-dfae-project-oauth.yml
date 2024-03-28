@@ -1,19 +1,19 @@
-#CD pipeline for dfa api
-name: cd-dfae-project-api
+name: cd-dfae-project-oauth
 
 on:
   push:
     branches:
       #      - develop
       - 'EMCRI-12'
-    paths:
-      - "dfa/src/API/**"
-      - ".github/workflows/cd-dfae-project-api.yml"
 
+    paths:
+      - "oauth-server/src/API/**"
+      - ".github/workflows/cd-dfae-project-oauth.yml"
   workflow_dispatch:
+
 env:
-  IMAGE_NAME: dfa-portal-api
-  WORKING_DIRECTORY: ./dfa/src/API
+  IMAGE_NAME: oauth-server
+  WORKING_DIRECTORY: ./oauth-server/src/API
 
 jobs:
   build:
@@ -34,6 +34,7 @@ jobs:
         working-directory: ${{env.WORKING_DIRECTORY}}
         run: |
           docker build -t ${{env.IMAGE_NAME}} .
+          docker images
 
       - name: Tag Image
         run: |
@@ -63,8 +64,8 @@ jobs:
           # Update the Helm values file with the new image tag and version
           DATETIME=$(date +'%Y-%m-%d %H:%M:%S')  # Get current date and time
           
-          sed -i  "s/apitag: .*/apitag: dev # Image Updated on $DATETIME/" ../deploy/dev_values.yaml
-          sed -i  "s/apitag: .*/apitag: dev # Image Updated on $DATETIME/"  dfa-portal-api/values.yaml
+          sed -i  "s/authtag: .*/authtag: dev # Image Updated on $DATETIME/" ../deploy/dev_values.yaml
+          sed -i  "s/authtag: .*/authtag: dev # Image Updated on $DATETIME/"  dfa-oauth-server/values.yaml
           
           # Commit and push the changes
           git config --global user.email "actions@github.com"
@@ -84,5 +85,5 @@ jobs:
 
           git add .
 
-          git commit -m "Update Dev API image tag"
+          git commit -m "Update Dev auth image tag"
           git push origin main  # Update the branch name as needed
